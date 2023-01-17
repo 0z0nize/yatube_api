@@ -65,6 +65,8 @@ class Comment(models.Model):
 # в ней должно быть два поля —
 # user (кто подписан)
 # и following (на кого подписан).
+
+
 class Follow(models.Model):
     user = models.ForeignKey(
         User,

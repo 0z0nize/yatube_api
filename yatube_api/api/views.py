@@ -15,7 +15,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
-        
+
 # TODO:  Напишите свой вариант
 # GET —
 # возвращает все подписки пользователя, сделавшего запрос.
