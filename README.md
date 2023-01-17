@@ -50,8 +50,24 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-Открыть:
+Документация к API проекта Yatube:
 
 ```
 http://127.0.0.1:8000/redoc/
+```
+Примеры работы с API для неавторизованных пользователей пользователей:
+
+```
+GET api/v1/posts/ - список публикаций
+GET api/v1/posts/{id}/ - публикациия
+GET api/v1/posts/?limit=100&offset=200 - список публикаций с пагинацией
+```
+
+```
+GET api/v1/groups/ - список сообществ
+GET api/v1/groups/{id}/ - описание сообщества по id
+```
+```
+GET api/v1/{post_id}/comments/ - список комментариев к публикации
+GET api/v1/{post_id}/comments/{id}/ - комментарий к публикации
 ```
