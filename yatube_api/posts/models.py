@@ -5,7 +5,6 @@ from django.db import models
 User = get_user_model()
 
 
-# добавить недостающие модели в приложении posts
 class Group(models.Model):
     title = models.CharField(
         'Title',
@@ -70,11 +69,6 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         related_name='comments'
     )
-
-# в проекте должна быть описана модель Follow,
-# в ней должно быть два поля —
-# user (кто подписан)
-# и following (на кого подписан).
 
 
 class Follow(models.Model):

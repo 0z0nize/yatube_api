@@ -1,11 +1,16 @@
 from django.shortcuts import get_object_or_404
-from posts.models import Group, Post
+from django_filters.rest_framework import DjangoFilterBackend
+from posts.models import Group, Post, User
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.permissions import (IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 
+from .custom_viewsets import CreateListViewSet
 from .permissions import IsAuthorOrReadOnly
-from .serializers import CommentSerializer, GroupSerializer, PostSerializer
+from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
+                          PostSerializer)
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -30,42 +35,21 @@ class CommentViewSet(viewsets.ModelViewSet):
         post = get_object_or_404(Post, id=self.kwargs.get('post_id'))
         serializer.save(author=self.request.user, post=post)
 
+
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    
 
-# TODO:  Напишите свой вариант
-# GET —
-# возвращает все подписки пользователя, сделавшего запрос.
-# Возможен поиск по подпискам по параметру search
-# POST
-# — подписать пользователя, сделавшего запрос на пользователя,
-# переданного в теле запроса.
-# При попытке подписаться на самого себя,
-# пользователь должен получить информативное сообщение об ошибке.
-# Проверка должна осуществляться на уровне API.
-# Анонимный пользователь на запросы к этому эндпоинту
-# должен получать ответ с кодом 401 Unauthorized.
-# Сейчас ни самой модели Follow,
-# ни обработчиков запросов в коде нет. Надо их написать.
 
-# Применяйте вьюсеты.
-# Для аутентификации используйте JWT-токены.
-# У неаутентифицированных пользователей
-# доступ к API должен быть только на чтение.
-# Исключение — эндпоинт /follow/:
-# доступ к нему должен предоставляться только
-# аутентифицированным пользователям.
-# Аутентифицированным пользователям разрешено
-# изменение и удаление своего контента;
-# в остальных случаях доступ предоставляется только для чтения.
-# Добавление новых пользователей через API не требуется.
+class FollowViewSet(CreateListViewSet):
+    permission_classes = [IsAuthenticated]
+    serializer_class = FollowSerializer
+    filter_backends = (DjangoFilterBackend, SearchFilter)
+    search_fields = ('user__username', 'following__username')
 
-# Для проверки прав в DRF удобно использовать пермишены.
-# При необходимости пишите и применяйте собственные классы разрешений.
-# При описании вьюсетов для некоторых моделей имеет смысл
-# наследоваться от собственного базового вьюсета.
-# Не пренебрегайте этой возможностью.
-# Работу с JWT-токенами удобно организовать при помощи библиотеки Djoser,
-# но выбор решения за вами.
+    def get_queryset(self):
+        user = get_object_or_404(User, username=self.request.user.username)
+        return user.follower
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
