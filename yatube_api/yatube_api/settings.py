@@ -96,5 +96,7 @@ REST_FRAMEWORK = {
     ],
 }
 
+# Для аутентификации используйте JWT-токены.
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

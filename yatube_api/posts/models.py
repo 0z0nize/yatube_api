@@ -24,3 +24,10 @@ class Comment(models.Model):
     text = models.TextField()
     created = models.DateTimeField(
         'Дата добавления', auto_now_add=True, db_index=True)
+
+# добавить недостающие модели в приложении posts
+
+# в проекте должна быть описана модель Follow, 
+# в ней должно быть два поля — 
+# user (кто подписан) 
+# и following (на кого подписан).
