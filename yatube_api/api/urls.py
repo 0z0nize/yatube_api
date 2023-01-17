@@ -1,6 +1,11 @@
-from django.urls import path
+from django.urls import include, path
 
 urlpatterns = [
+    # Djoser создаст набор необходимых эндпоинтов.
+    # базовые, для управления пользователями в Django:
+    # path('auth/', include('djoser.urls')),
+    # JWT-эндпоинты, для управления JWT-токенами:
+    path('v1/', include('djoser.urls.jwt')),
 ]
 
 # /v1/posts/
