@@ -12,6 +12,7 @@ class Group(models.Model):
         max_length=settings.CHAR_IN_GROUP
     )
     slug = models.SlugField(
+        max_length=settings.CHAR_IN_SLUG_GROUP,
         unique=True
     )
     description = models.TextField(
@@ -66,7 +67,7 @@ class Comment(models.Model):
     )
     post = models.ForeignKey(
         Post,
-        on_delete=models.CASCADE, 
+        on_delete=models.CASCADE,
         related_name='comments'
     )
 
