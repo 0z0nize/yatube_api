@@ -14,4 +14,3 @@ class CreateListViewSet(
 
 class IsAuthOrReadOnlyViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly & IsAuthorOrReadOnly]
-    pass
