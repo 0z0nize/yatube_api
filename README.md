@@ -10,7 +10,7 @@
 ![requests version](https://img.shields.io/badge/requests-2.26.0-yellowgreen)
 
 ### Как запустить проект:
-`rgb(9, 105, 218)`
+
 _Клонировать репозиторий и перейти в него в командной строке:_
 
 ```
