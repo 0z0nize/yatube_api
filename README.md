@@ -1,5 +1,6 @@
-## Описание.
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+## Описание.
+
 Проект «API для Yatube».
 
 ### **Технологии**
