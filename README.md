@@ -1,3 +1,17 @@
+### Описание.
+
+Проект «API для Yatube» предоставляет доступ
+к постам, комментариям, группам и подпискам 
+Yatube, в зависимости от статуса пользователя. 
+Аутентификация реализована по JWT-токену.
+
+### **Технологии**
+![python version](https://img.shields.io/badge/Python-3.9.10-yellowgreen?logo=python)
+![django version](https://img.shields.io/badge/Django-3.2.16-yellowgreen?logo=django)
+![djangorestframework version](https://img.shields.io/badge/djangorestframework-3.12.4-yellowgreen?logo=django)
+![pytest version](https://img.shields.io/badge/pytest-6.2.4-yellowgreen?logo=pytest)
+![requests version](https://img.shields.io/badge/requests-2.26.0-yellowgreen)
+
 ### Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
