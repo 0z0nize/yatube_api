@@ -11,7 +11,7 @@
 
 ### Как запустить проект:
 
-Клонировать репозиторий и перейти в него в командной строке:
+_Клонировать репозиторий и перейти в него в командной строке:_
 
 ```
 git clone https://github.com/0z0nize/api_final_yatube.git
@@ -21,7 +21,7 @@ git clone https://github.com/0z0nize/api_final_yatube.git
 cd api_final_yatube
 ```
 
-Cоздать и активировать виртуальное окружение:
+_Cоздать и активировать виртуальное окружение:_
 
 ```
 python3 -m venv env
@@ -43,30 +43,30 @@ python3 -m venv env
 python3 -m pip install --upgrade pip
 ```
 
-Установить зависимости из файла requirements.txt:
+_Установить зависимости из файла requirements.txt:_
 
 ```
 pip install -r requirements.txt --use-pep517
 ```
 
-Выполнить миграции:
+_Выполнить миграции:_
 
 ```
 python3 manage.py migrate
 ```
 
-Запустить проект:
+_Запустить проект:_
 
 ```
 python3 manage.py runserver
 ```
 
-Документация к API проекта Yatube:
+_Документация к API проекта Yatube:_
 
 ```
 http://127.0.0.1:8000/redoc/
 ```
-Примеры работы с API для неавторизованных пользователей пользователей:
+_Примеры работы с API для неавторизованных пользователей пользователей:_
 
 ```
 GET api/v1/posts/ - список публикаций
