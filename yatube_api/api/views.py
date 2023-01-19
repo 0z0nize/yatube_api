@@ -5,9 +5,9 @@ from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
 
-from .custom_viewsets import CreateListViewSet, IsAuthOrReadOnlyViewSet
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
                           PostSerializer)
+from .viewsets import CreateListViewSet, IsAuthOrReadOnlyViewSet
 
 
 class PostViewSet(IsAuthOrReadOnlyViewSet):
