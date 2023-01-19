@@ -1,4 +1,3 @@
-The background color should be `#ffffff` for light mode and `#0d1117` for dark mode.
 ## Описание.
 
 Проект «API для Yatube».
@@ -15,7 +14,7 @@ The background color should be `#ffffff` for light mode and `#0d1117` for dark m
 _Клонировать репозиторий и перейти в него в командной строке:_
 
 ```
-git clone https://github.com/0z0nize/api_final_yatube.git
+git clone https://github.com/0z0nize/api_final_yatube.git `rgb(9, 105, 218)`
 ```
 
 ```
