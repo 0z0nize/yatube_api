@@ -1,7 +1,6 @@
 from rest_framework import mixins, viewsets
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-from .permissions import IsAuthorOrReadOnly
+from .permissions import IsAuthOrReadOnly
 
 
 class CreateListViewSet(
@@ -13,4 +12,4 @@ class CreateListViewSet(
 
 
 class IsAuthOrReadOnlyViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticatedOrReadOnly & IsAuthorOrReadOnly]
+    permission_classes = [IsAuthOrReadOnly]
