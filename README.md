@@ -1,4 +1,4 @@
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![back](https://user-images.githubusercontent.com/112638163/233347160-c460d6f1-27ce-4215-ba4b-47ea74000f32.jpg)
 ## Описание.
 
 Проект «API для Yatube».
