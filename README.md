@@ -1,6 +1,5 @@
 ![back](https://user-images.githubusercontent.com/112638163/233347160-c460d6f1-27ce-4215-ba4b-47ea74000f32.jpg)
 ## Описание.
-![118-1185329_api-integration-api-interface](https://user-images.githubusercontent.com/112638163/234617212-34e270cf-8722-4d73-b035-0d707687c24c.png)
 
 Проект «API для Yatube».
 
