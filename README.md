@@ -1,4 +1,4 @@
-![233348780-313ad8af-8fa5-47e0-8f1c-7f0aea8c24a3](https://user-images.githubusercontent.com/112638163/234621271-05154fff-dab2-400d-b6d2-7f62efdbb21f.png)
+![233348780-313ad8af-8fa5-47e0-8f1c-7f0aea8c24a122](https://user-images.githubusercontent.com/112638163/234629394-ba57d889-a76c-4842-abe5-067a2d3301de.png)
 
 ## Описание.
 
