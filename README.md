@@ -1,6 +1,6 @@
 ![233348780-313ad8af-8fa5-47e0-8f1c-7f0aea8c24a122](https://user-images.githubusercontent.com/112638163/234629394-ba57d889-a76c-4842-abe5-067a2d3301de.png)
 
-## Описание.
+### Описание
 CRUD для Yatube
 * В проекте api_yatube есть приложение posts с описанием моделей Yatube. В нём реализовано API для всех моделей приложения.
 * Вся логика API вынесена в отдельное приложение. 
@@ -8,14 +8,14 @@ CRUD для Yatube
 * Аутентифицированный пользователь авторизован на изменение и удаление своего контента; в остальных случаях доступ предоставляется только для чтения.
 * При попытке изменить чужие данные возвращается код ответа 403 Forbidden.
 
-### **Технологии**
+### Технологии
 ![python version](https://img.shields.io/badge/Python-3.9.10-yellowgreen?logo=python)
 ![django version](https://img.shields.io/badge/Django-3.2.16-yellowgreen?logo=django)
 ![djangorestframework version](https://img.shields.io/badge/djangorestframework-3.12.4-yellowgreen?logo=django)
 ![pytest version](https://img.shields.io/badge/pytest-6.2.4-yellowgreen?logo=pytest)
 ![requests version](https://img.shields.io/badge/requests-2.26.0-yellowgreen)
 
-### Как запустить проект:
+### Как запустить проект
 
 Клонировать репозиторий и перейти в него в командной строке:
 
