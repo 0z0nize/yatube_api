@@ -1,8 +1,12 @@
 ![233348780-313ad8af-8fa5-47e0-8f1c-7f0aea8c24a122](https://user-images.githubusercontent.com/112638163/234629394-ba57d889-a76c-4842-abe5-067a2d3301de.png)
 
 ## Описание.
-
-Проект «API для Yatube».
+CRUD для Yatube
+* В проекте api_yatube есть приложение posts с описанием моделей Yatube. В нём реализовано API для всех моделей приложения.
+* Вся логика API вынесена в отдельное приложение. 
+* API доступен только аутентифицированным пользователям. Используется аутентификация по токену TokenAuthentication.
+* Аутентифицированный пользователь авторизован на изменение и удаление своего контента; в остальных случаях доступ предоставляется только для чтения.
+* При попытке изменить чужие данные возвращается код ответа 403 Forbidden.
 
 ### **Технологии**
 ![python version](https://img.shields.io/badge/Python-3.9.10-yellowgreen?logo=python)
@@ -13,7 +17,7 @@
 
 ### Как запустить проект:
 
-_Клонировать репозиторий и перейти в него в командной строке:_
+Клонировать репозиторий и перейти в него в командной строке:
 
 ```
 git clone https://github.com/0z0nize/api_final_yatube.git
@@ -23,19 +27,19 @@ git clone https://github.com/0z0nize/api_final_yatube.git
 cd api_final_yatube
 ```
 
-_Cоздать и активировать виртуальное окружение:_
+Cоздать и активировать виртуальное окружение:
 
 ```
 python3 -m venv env
 ```
 
-* Если у вас Linux/macOS
+- Если у вас Linux/macOS
 
     ```
     source env/bin/activate
     ```
 
-* Если у вас windows
+- Если у вас windows
 
     ```
     source env/Scripts/activate
@@ -45,13 +49,13 @@ python3 -m venv env
 python3 -m pip install --upgrade pip
 ```
 
-_Установить зависимости из файла requirements.txt:_
+Установить зависимости из файла requirements.txt:
 
 ```
 pip install -r requirements.txt --use-pep517
 ```
 
-_Выполнить миграции:_
+Выполнить миграции:
 
 ```
 python3 manage.py migrate
@@ -63,12 +67,12 @@ _Запустить проект:_
 python3 manage.py runserver
 ```
 
-_Документация к API проекта Yatube:_
+Документация к API проекта Yatube:
 
 ```
 http://127.0.0.1:8000/redoc/
 ```
-_Примеры работы с API для неавторизованных пользователей пользователей:_
+Примеры работы с API для неавторизованных пользователей пользователей:
 
 ```
 GET api/v1/posts/ - список публикаций
@@ -84,3 +88,6 @@ GET api/v1/groups/{id}/ - описание сообщества по id
 GET api/v1/{post_id}/comments/ - список комментариев к публикации
 GET api/v1/{post_id}/comments/{id}/ - комментарий к публикации
 ```
+
+### Автор проекта:
+#### [_Владислав Шкаровский_](https://github.com/0z0nize)
