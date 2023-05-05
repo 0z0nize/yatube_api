@@ -61,7 +61,7 @@ pip install -r requirements.txt --use-pep517
 python3 manage.py migrate
 ```
 
-_Запустить проект:_
+Запустить проект:
 
 ```
 python3 manage.py runserver
