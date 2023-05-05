@@ -1,7 +1,7 @@
 ![233348780-313ad8af-8fa5-47e0-8f1c-7f0aea8c24a122](https://user-images.githubusercontent.com/112638163/234629394-ba57d889-a76c-4842-abe5-067a2d3301de.png)
 
 ### Описание
-CRUD для Yatube
+CRUD для [Yatube](https://github.com/0z0nize/yatube)
 * В проекте api_yatube есть приложение posts с описанием моделей Yatube. В нём реализовано API для всех моделей приложения.
 * Вся логика API вынесена в отдельное приложение. 
 * API доступен только аутентифицированным пользователям. Используется аутентификация по токену TokenAuthentication.
